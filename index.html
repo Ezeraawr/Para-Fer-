@@ -3,27 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarjetas Cinnamoroll</title>
+    <title>Feliz Cumpleaños Fer</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Reproductor de música -->
     <audio autoplay loop>
-        <source src="kimi_ni_todoke_ost.mp3" type="audio/mpeg">
-        Tu navegador no soporta el audio.
+        <source src="https://files.catbox.moe/dbkv1s.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
     </audio>
 
     <div class="container">
-        <h1>Tarjetas de Cinnamoroll</h1>
+        <h1>Feliz Cumpleaños Fer</h1>
+
+        <!-- Imagen de Cinnamoroll -->
+        <img src="https://i.ibb.co/5xGfYBr6/cinnamoroll.jpg" alt="Cinnamoroll" class="cinnamoroll-img">
+
         <div class="grid">
-            <!-- Generar 22 tarjetas -->
-            <!-- Puedes cambiar el texto si quieres -->
-            <!-- Solo se repite el mismo formato -->
             <script>
-                for (let i = 1; i <= 22; i++) {
+                // Lista de razones para amar a Fer
+                const razones = [
+                    "Tu sonrisa ilumina mi día",
+                    "Siempre sabes cómo hacerme reír",
+                    "Eres una persona increíblemente bondadosa",
+                    "Tienes el corazón más hermoso",
+                    "Siempre me apoyas sin importar qué",
+                    "Tu risa es mi sonido favorito",
+                    "Eres más dulce que cualquier postre",
+                    "Siempre me haces sentir especial",
+                    "Eres mi paz en los días difíciles",
+                    "Tienes una energía contagiosa",
+                    "Tu amor es lo mejor que me ha pasado",
+                    "Eres la persona más hermosa por dentro y por fuera",
+                    "Siempre sabes qué decir para animarme",
+                    "Tu ternura no tiene comparación",
+                    "Eres mi persona favorita en el mundo",
+                    "Cada momento contigo es mágico",
+                    "Tu amor me motiva a ser mejor",
+                    "Eres la definición de felicidad",
+                    "No puedo imaginar mi vida sin ti",
+                    "Tu existencia hace del mundo un lugar mejor",
+                    "Eres mi mejor regalo",
+                    "Te amo más de lo que las palabras pueden expresar"
+                ];
+
+                // Generar las 22 tarjetas con las razones
+                for (let i = 0; i < 22; i++) {
                     document.write(`
                         <div class="card">
-                            <img src="cinnamoroll.jpg" alt="Cinnamoroll">
-                            <p>Tarjeta #${i}</p>
+                            <img src="https://i.ibb.co/5xGfYBr6/cinnamoroll.jpg" alt="Cinnamoroll">
+                            <p>Tarjeta #${i + 1}</p>
+                            <p class="razon">${razones[i]}</p>
                         </div>
                     `);
                 }
@@ -32,51 +62,3 @@
     </div>
 </body>
 </html>
-
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #fce4ec; /* Color rosa pastel */
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    padding: 20px;
-}
-
-h1 {
-    color: #ff4081;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.card {
-    background: white;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease-in-out;
-}
-
-.card:hover {
-    transform: scale(1.1);
-}
-
-.card img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.card p {
-    margin-top: 10px;
-    font-weight: bold;
-    color: #ff4081;
-}
